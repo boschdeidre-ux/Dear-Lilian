@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Dear Lilian</title>
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="index.html">Dear Lilian</a>
+      <nav class="main-nav" aria-label="Main navigation">
+        <a href="index.html">Home</a>
+        <a href="shop.html">Shop</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+        <button id="cart-toggle" aria-controls="cart" aria-expanded="false">Cart (<span id="cart-count">0</span>)</button>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="container hero-inner">
+        <div class="hero-text">
+          <h1 class="hero-title">Dear Lilian</h1>
+          <p class="hero-subtitle">Handmade natural soaps — gentle, sustainable, beautiful</p>
+          <div class="hero-cta">
+            <a class="btn primary" href="shop.html">Shop Now</a>
+            <a class="btn" href="about.html">Learn More</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="features container">
+      <article class="feature">
+        <h3>Natural Ingredients</h3>
+        <p>Olive oil, coconut oil, shea butter, and essential oils only — transparent ingredient lists for every bar.</p>
+      </article>
+      <article class="feature">
+        <h3>Sustainable Packaging</h3>
+        <p>Recycled paper boxes and minimal plastic. Refill & recycle options available.</p>
+      </article>
+      <article class="feature">
+        <h3>Small Batch</h3>
+        <p>Cold-processed soaps made in small, careful batches to ensure quality and consistency.</p>
+      </article>
+    </section>
+
+    <section class="container featured-products" aria-labelledby="featured-heading">
+      <h2 id="featured-heading">Featured Soaps</h2>
+      <div id="featured-grid" class="product-grid">
+        <!-- Products rendered by js/shop.js -->
+      </div>
+      <p class="muted">Handcrafted. Limited runs — get them before they're gone.</p>
+    </section>
+
+    <section class="testimonials container">
+      <h2>What customers say</h2>
+      <blockquote>"My skin has never felt better — the lavender bar is a dream." — Emma</blockquote>
+    </section>
+  </main>
+
+  <aside id="cart" class="cart" aria-hidden="true">
+    <div class="cart-inner">
+      <button id="cart-close" aria-label="Close cart">✕</button>
+      <h3>Your Cart</h3>
+      <ul id="cart-items" class="cart-items"></ul>
+      <div class="cart-summary">
+        <div>Subtotal: <strong id="cart-subtotal">ZAR0.00</strong></div>
+        <button id="checkout-btn" class="btn primary">Checkout</button>
+      </div>
+    </div>
+  </aside>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div>
+        <strong>Dear Lilian</strong>
+        <p>Handmade natural soaps. Based in Johannesburg.</p>
+      </div>
+      <div>
+        <h4>Contact</h4>
+        <p><a href="contact.html">Contact form</a> • <a href="mailto:hello@dearlilian.example">hello@dearlilian.example</a></p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/shop.js" defer></script>
+</body>
+</html>
