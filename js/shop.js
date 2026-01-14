@@ -6,21 +6,33 @@
   const products = [
     {
       id: 'lavender-01',
-      title: 'Lavender Bar',
+      title: 'Honey Lavender Soap',
       description: 'Calming lavender essential oil, gentle on sensitive skin.',
-      price: 58.00
+      price: 60.00
     },
     {
       id: 'citrus-01',
       title: 'Citrus Zest',
       description: 'Bright, zesty bar with uplifting citrus essential oils.',
-      price: 62.50
+      price: 60.00
     },
     {
       id: 'hotproc-01',
       title: 'Hot-Processed Soap (Rustic)',
       description: 'Lovely rustic-looking hot-processed soap with the same natural goodness — more readily available for when you need it fast.',
-      price: 44.00
+      price: 60.00
+    },
+    {
+      id: 'coffee-01',
+      title: 'Coffee',
+      description: 'Energizing coffee-infused soap with natural exfoliating properties.',
+      price: 60.00
+    },
+    {
+      id: 'castoroil-01',
+      title: 'Castor Oil Soap',
+      description: 'Rich and moisturizing castor oil soap for deep nourishment.',
+      price: 60.00
     }
   ];
 
