@@ -2,7 +2,7 @@
 (function(){
   'use strict';
 
-  // Sample product data — includes new Hot-Processed Soap
+  // Sample product data
   const products = [
     {
       id: 'lavender-01',
@@ -18,9 +18,9 @@
     },
     {
       id: 'hotproc-01',
-      title: 'Hot-Processed Soap (Rustic)',
-      description: 'Lovely rustic-looking hot-processed soap with the same natural goodness — more readily available for when you need it fast.',
-      price: 60.00
+      title: 'Natural, unfragranced tallow soap',
+      description: 'Pure and simple tallow soap, unfragranced and gentle on all skin types.',
+      price: 50.00
     },
     {
       id: 'coffee-castoroil-01',
