@@ -2,7 +2,7 @@
 (function(){
   'use strict';
 
-  // Sample product data — includes new Hot-Processed Soap
+  // Sample product data
   const products = [
     {
       id: 'lavender-01',
