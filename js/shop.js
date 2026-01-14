@@ -23,15 +23,9 @@
       price: 60.00
     },
     {
-      id: 'coffee-01',
-      title: 'Coffee',
-      description: 'Energizing coffee-infused soap with natural exfoliating properties.',
-      price: 60.00
-    },
-    {
-      id: 'castoroil-01',
-      title: 'Castor Oil Soap',
-      description: 'Rich and moisturizing castor oil soap for deep nourishment.',
+      id: 'coffee-castoroil-01',
+      title: 'Coffee and Castor Oil Soap',
+      description: 'Energizing coffee-infused soap with natural exfoliating properties and rich castor oil for deep nourishment.',
       price: 60.00
     }
   ];
