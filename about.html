@@ -1,0 +1,113 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>About - Dear Lilian</title>
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="index.html">Dear Lilian</a>
+      <nav class="main-nav" aria-label="Main navigation">
+        <a href="index.html">Home</a>
+        <a href="shop.html">Shop</a>
+        <a href="about.html" aria-current="page">About</a>
+        <a href="contact.html">Contact</a>
+        <button id="cart-toggle" aria-controls="cart" aria-expanded="false">Cart (<span id="cart-count">0</span>)</button>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <section style="padding: 64px 24px; max-width: 800px; margin: 0 auto;">
+      <h1 style="font-size: 2.5rem; color: var(--primary-dark); margin-bottom: 24px; text-align: center;">About Dear Lilian</h1>
+      
+      <div style="background: var(--bg-cream); padding: 32px; border-radius: 12px; margin-bottom: 32px;">
+        <h2 style="font-size: 1.75rem; color: var(--primary-dark); margin-bottom: 16px;">Our Story</h2>
+        <p style="line-height: 1.8; color: var(--text-color); margin-bottom: 16px;">
+          Dear Lilian was born from a passion for natural, sustainable living and a love for traditional soap-making. 
+          Based in Johannesburg, we craft each bar by hand using time-honored cold-process methods that preserve 
+          the natural goodness of our ingredients.
+        </p>
+        <p style="line-height: 1.8; color: var(--text-color);">
+          Our name pays homage to Lilian, a grandmother who believed in the simple beauty of handmade goods 
+          and the importance of treating both our bodies and our planet with care and respect.
+        </p>
+      </div>
+
+      <div style="margin-bottom: 32px;">
+        <h2 style="font-size: 1.75rem; color: var(--primary-dark); margin-bottom: 16px;">Our Values</h2>
+        
+        <article style="margin-bottom: 24px;">
+          <h3 style="font-size: 1.25rem; color: var(--primary-color); margin-bottom: 8px;">Natural Ingredients</h3>
+          <p style="line-height: 1.8; color: var(--text-muted);">
+            We use only natural, skin-loving ingredients like olive oil, coconut oil, shea butter, and pure essential oils. 
+            No synthetic fragrances, harsh chemicals, or unnecessary additives.
+          </p>
+        </article>
+
+        <article style="margin-bottom: 24px;">
+          <h3 style="font-size: 1.25rem; color: var(--primary-color); margin-bottom: 8px;">Sustainable Practices</h3>
+          <p style="line-height: 1.8; color: var(--text-muted);">
+            From our recycled paper packaging to our commitment to minimal waste, we're dedicated to reducing our 
+            environmental footprint. We offer refill options and encourage customers to recycle.
+          </p>
+        </article>
+
+        <article style="margin-bottom: 24px;">
+          <h3 style="font-size: 1.25rem; color: var(--primary-color); margin-bottom: 8px;">Small Batch Quality</h3>
+          <p style="line-height: 1.8; color: var(--text-muted);">
+            Every batch is made with care and attention to detail. Our cold-process method takes longer, but it 
+            produces a superior soap that's gentle on skin and full of natural glycerin.
+          </p>
+        </article>
+
+        <article>
+          <h3 style="font-size: 1.25rem; color: var(--primary-color); margin-bottom: 8px;">Community First</h3>
+          <p style="line-height: 1.8; color: var(--text-muted);">
+            We believe in supporting local suppliers and giving back to our Johannesburg community. 
+            A portion of our profits goes to local environmental initiatives.
+          </p>
+        </article>
+      </div>
+
+      <div style="background: linear-gradient(135deg, var(--bg-cream), #efe9dc); padding: 32px; border-radius: 12px; text-align: center;">
+        <h2 style="font-size: 1.75rem; color: var(--primary-dark); margin-bottom: 16px;">Join Our Journey</h2>
+        <p style="line-height: 1.8; color: var(--text-color); margin-bottom: 24px;">
+          We're constantly learning and growing. Thank you for supporting small-batch, sustainable soap making.
+        </p>
+        <a href="shop.html" class="btn primary">Shop Our Soaps</a>
+      </div>
+    </section>
+  </main>
+
+  <aside id="cart" class="cart" aria-hidden="true">
+    <div class="cart-inner">
+      <button id="cart-close" aria-label="Close cart">✕</button>
+      <h3>Your Cart</h3>
+      <ul id="cart-items" class="cart-items"></ul>
+      <div class="cart-summary">
+        <div>Subtotal: <strong id="cart-subtotal">ZAR0.00</strong></div>
+        <button id="checkout-btn" class="btn primary">Checkout</button>
+      </div>
+    </div>
+  </aside>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div>
+        <strong>Dear Lilian</strong>
+        <p>Handmade natural soaps. Based in Johannesburg.</p>
+      </div>
+      <div>
+        <h4>Contact</h4>
+        <p><a href="contact.html">Contact form</a> • <a href="mailto:hello@dearlilian.example">hello@dearlilian.example</a></p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/shop.js" defer></script>
+</body>
+</html>
