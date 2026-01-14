@@ -39,7 +39,7 @@
   };
 
   function renderProducts(){
-    const grid = document.getElementById('featured-grid');
+    const grid = document.getElementById('featured-grid') || document.getElementById('product-grid');
     if(!grid) return;
     grid.innerHTML = '';
 
