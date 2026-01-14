@@ -8,25 +8,29 @@
       id: 'lavender-01',
       title: 'Honey Lavender Soap',
       description: 'Calming lavender essential oil, gentle on sensitive skin.',
-      price: 60.00
+      price: 60.00,
+      image: null
     },
     {
       id: 'citrus-01',
       title: 'Citrus Zest',
       description: 'Bright, zesty bar with uplifting citrus essential oils.',
-      price: 60.00
+      price: 60.00,
+      image: null
     },
     {
       id: 'hotproc-01',
       title: 'Natural, unfragranced tallow soap',
       description: 'Pure and simple tallow soap, unfragranced and gentle on all skin types.',
-      price: 50.00
+      price: 50.00,
+      image: null
     },
     {
       id: 'coffee-castoroil-01',
       title: 'Coffee and Castor Oil Soap',
       description: 'Energizing coffee-infused soap with natural exfoliating properties and rich castor oil for deep nourishment.',
-      price: 60.00
+      price: 60.00,
+      image: 'images/coffee-castor-oil-soap.svg'
     }
   ];
 
@@ -56,14 +60,23 @@
       const img = document.createElement('div');
       img.className = 'product-image';
       img.style.height = '120px';
-      img.style.background = 'linear-gradient(180deg, #f6f2ea, #efe9dc)';
       img.style.borderRadius = '8px';
       img.style.display = 'flex';
       img.style.alignItems = 'center';
       img.style.justifyContent = 'center';
-      img.style.color = '#7a6b5d';
-      img.style.fontStyle = 'italic';
-      img.textContent = 'Rustic soap';
+      
+      if (p.image) {
+        // Use actual product image
+        img.style.backgroundImage = `url('${p.image}')`;
+        img.style.backgroundSize = 'cover';
+        img.style.backgroundPosition = 'center';
+      } else {
+        // Use placeholder gradient for products without images
+        img.style.background = 'linear-gradient(180deg, #f6f2ea, #efe9dc)';
+        img.style.color = '#7a6b5d';
+        img.style.fontStyle = 'italic';
+        img.textContent = 'Rustic soap';
+      }
 
       const title = document.createElement('div');
       title.className = 'title';
