@@ -1,0 +1,48 @@
+<svg width="400" height="300" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <rect width="400" height="300" fill="#f6f2ea"/>
+  
+  <!-- Soap bar shape with gradient -->
+  <defs>
+    <linearGradient id="soapGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#8B6F47;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#A0826D;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#6B5344;stop-opacity:1" />
+    </linearGradient>
+    
+    <radialGradient id="coffeeBean" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" style="stop-color:#4a2c1a;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#2d1810;stop-opacity:1" />
+    </radialGradient>
+  </defs>
+  
+  <!-- Main soap bar -->
+  <rect x="100" y="80" width="200" height="140" rx="15" fill="url(#soapGradient)" stroke="#6B5344" stroke-width="2"/>
+  
+  <!-- Coffee beans decoration -->
+  <ellipse cx="150" cy="120" rx="12" ry="16" fill="url(#coffeeBean)"/>
+  <line x1="150" y1="110" x2="150" y2="130" stroke="#8B6F47" stroke-width="1.5" stroke-linecap="round"/>
+  
+  <ellipse cx="180" cy="145" rx="12" ry="16" fill="url(#coffeeBean)"/>
+  <line x1="180" y1="135" x2="180" y2="155" stroke="#8B6F47" stroke-width="1.5" stroke-linecap="round"/>
+  
+  <ellipse cx="220" cy="130" rx="12" ry="16" fill="url(#coffeeBean)"/>
+  <line x1="220" y1="120" x2="220" y2="140" stroke="#8B6F47" stroke-width="1.5" stroke-linecap="round"/>
+  
+  <ellipse cx="250" cy="160" rx="12" ry="16" fill="url(#coffeeBean)"/>
+  <line x1="250" y1="150" x2="250" y2="170" stroke="#8B6F47" stroke-width="1.5" stroke-linecap="round"/>
+  
+  <!-- Texture dots (exfoliating particles) -->
+  <circle cx="130" cy="160" r="2" fill="#4a2c1a" opacity="0.6"/>
+  <circle cx="140" cy="175" r="2" fill="#4a2c1a" opacity="0.6"/>
+  <circle cx="165" cy="170" r="2" fill="#4a2c1a" opacity="0.6"/>
+  <circle cx="195" cy="175" r="2" fill="#4a2c1a" opacity="0.6"/>
+  <circle cx="210" cy="165" r="2" fill="#4a2c1a" opacity="0.6"/>
+  <circle cx="235" cy="180" r="2" fill="#4a2c1a" opacity="0.6"/>
+  <circle cx="260" cy="175" r="2" fill="#4a2c1a" opacity="0.6"/>
+  <circle cx="275" cy="190" r="2" fill="#4a2c1a" opacity="0.6"/>
+  
+  <!-- Label text -->
+  <text x="200" y="250" font-family="Arial, sans-serif" font-size="18" fill="#6B5344" text-anchor="middle" font-weight="bold">Coffee &amp; Castor Oil</text>
+  <text x="200" y="275" font-family="Arial, sans-serif" font-size="14" fill="#8B6F47" text-anchor="middle">Natural Soap</text>
+</svg>
