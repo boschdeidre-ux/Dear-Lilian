@@ -129,7 +129,7 @@
 
       const addBtn = document.createElement('button');
       addBtn.className = 'btn primary';
-      addBtn.textContent = 'Add to cart';
+      addBtn.textContent = 'Add to Bag';
       addBtn.addEventListener('click', () => addToCart(p));
 
       actions.appendChild(addBtn);
