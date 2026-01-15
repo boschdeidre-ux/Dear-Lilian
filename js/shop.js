@@ -71,6 +71,13 @@
         imgEl.style.width = '100%';
         imgEl.style.height = '100%';
         imgEl.style.objectFit = 'cover';
+        imgEl.onerror = function() {
+          img.style.background = 'linear-gradient(180deg, #f6f2ea, #efe9dc)';
+          img.style.color = '#7a6b5d';
+          img.style.fontStyle = 'italic';
+          img.textContent = 'Rustic soap';
+          img.removeChild(imgEl);
+        };
         img.appendChild(imgEl);
       } else {
         img.style.background = 'linear-gradient(180deg, #f6f2ea, #efe9dc)';
