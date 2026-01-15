@@ -47,6 +47,12 @@
       title: 'Whipped Body Butter',
       description: 'Light, airy whipped body butter that melts into your skin, providing deep moisture without the greasy feel.',
       price: 85.00
+    },
+    {
+      id: 'face-serum-01',
+      title: 'Natural Face Serum',
+      description: 'Made-to-order nourishing face serum. Ingredients: flaxseed gel, castor oil, frankincense essential oil.',
+      price: 90.00
     }
   ];
 
