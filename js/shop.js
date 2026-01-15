@@ -71,7 +71,7 @@
       img.style.overflow = 'hidden';
       
       if (p.image) {
-        img.style.background = 'none';
+        img.style.background = 'transparent';
         const imgEl = document.createElement('img');
         imgEl.src = p.image;
         imgEl.alt = p.title;
@@ -79,7 +79,7 @@
         imgEl.style.height = '100%';
         imgEl.style.objectFit = 'cover';
         imgEl.onerror = function() {
-          if (imgEl.parentNode === img) {
+          if (imgEl.isConnected && imgEl.parentNode === img) {
             img.removeChild(imgEl);
           }
           applyPlaceholderStyle(img);
