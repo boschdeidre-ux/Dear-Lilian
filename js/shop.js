@@ -35,6 +35,12 @@
       title: 'Natural Body Lotion Bars',
       description: 'Nourishing solid lotion bars made with natural ingredients to moisturize and protect your skin.',
       price: 70.00
+    },
+    {
+      id: 'face-serum-01',
+      title: 'Natural Face Serum',
+      description: 'Made to order only with all natural products. Contains flaxseed gel, castor oil, and frankincense essential oil for nourishing and rejuvenating your skin.',
+      price: 80.00
     }
   ];
 
