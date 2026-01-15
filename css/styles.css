@@ -375,8 +375,8 @@ body {
 }
 
 .social-icon {
-  width: 32px;
-  height: 32px;
+  width: 24px;
+  height: 24px;
   transition: transform 0.2s, opacity 0.2s;
 }
 
