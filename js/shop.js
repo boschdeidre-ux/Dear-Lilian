@@ -37,6 +37,9 @@
       price: 70.00
     },
     {
+      id: 'face-serum-01',
+      title: 'Natural Face Serum',
+      description: 'Made to order only with all natural products. Contains flaxseed gel, castor oil, and frankincense essential oil for nourishing and rejuvenating your skin.',
       id: 'body-butter-01',
       title: 'Natural Body Butters',
       description: 'Rich, creamy body butters made with natural ingredients to deeply nourish and hydrate your skin.',
