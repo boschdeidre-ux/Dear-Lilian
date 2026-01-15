@@ -29,6 +29,12 @@
       description: 'Energizing coffee-infused soap with natural exfoliating properties and rich castor oil for deep nourishment.',
       price: 60.00,
       image: 'images/Coffee Castor Oil.png'
+    },
+    {
+      id: 'lotion-bar-01',
+      title: 'Natural Body Lotion Bars',
+      description: 'Nourishing solid lotion bars made with natural ingredients to moisturize and protect your skin.',
+      price: 70.00
     }
   ];
 
