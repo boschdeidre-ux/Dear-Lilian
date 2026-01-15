@@ -503,6 +503,15 @@ body {
 }
 
 /* About Page Styles */
+.founder-photo {
+  max-width: 300px;
+  width: 100%;
+  border-radius: 12px;
+  box-shadow: var(--shadow);
+  margin: 0 auto 32px;
+  display: block;
+}
+
 .story-box {
   background: var(--bg-cream);
   padding: 32px;
