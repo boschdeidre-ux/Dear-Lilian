@@ -26,7 +26,8 @@
       id: 'coffee-castoroil-01',
       title: 'Coffee and Castor Oil Soap',
       description: 'Energizing coffee-infused soap with natural exfoliating properties and rich castor oil for deep nourishment.',
-      price: 60.00
+      price: 60.00,
+      image: 'images/coffee-castor-oil-soap.png'
     }
   ];
 
@@ -55,15 +56,28 @@
 
       const img = document.createElement('div');
       img.className = 'product-image';
-      img.style.height = '120px';
-      img.style.background = 'linear-gradient(180deg, #f6f2ea, #efe9dc)';
+      img.style.height = '200px';
       img.style.borderRadius = '8px';
       img.style.display = 'flex';
       img.style.alignItems = 'center';
       img.style.justifyContent = 'center';
-      img.style.color = '#7a6b5d';
-      img.style.fontStyle = 'italic';
-      img.textContent = 'Rustic soap';
+      img.style.overflow = 'hidden';
+      
+      if (p.image) {
+        img.style.background = 'none';
+        const imgEl = document.createElement('img');
+        imgEl.src = p.image;
+        imgEl.alt = p.title;
+        imgEl.style.width = '100%';
+        imgEl.style.height = '100%';
+        imgEl.style.objectFit = 'cover';
+        img.appendChild(imgEl);
+      } else {
+        img.style.background = 'linear-gradient(180deg, #f6f2ea, #efe9dc)';
+        img.style.color = '#7a6b5d';
+        img.style.fontStyle = 'italic';
+        img.textContent = 'Rustic soap';
+      }
 
       const title = document.createElement('div');
       title.className = 'title';
