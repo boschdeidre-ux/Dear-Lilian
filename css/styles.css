@@ -368,6 +368,27 @@ body {
   text-decoration: underline;
 }
 
+.social-links {
+  display: flex;
+  gap: 16px;
+  margin-top: 12px;
+}
+
+.social-icon {
+  width: 32px;
+  height: 32px;
+  transition: transform 0.2s, opacity 0.2s;
+}
+
+.social-links a:hover {
+  text-decoration: none;
+}
+
+.social-links a:hover .social-icon {
+  transform: scale(1.1);
+  opacity: 0.8;
+}
+
 /* ===== Responsive Design ===== */
 @media (max-width: 768px) {
   .hero-title {
