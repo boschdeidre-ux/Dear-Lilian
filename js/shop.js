@@ -50,6 +50,13 @@
     if(!grid) return;
     grid.innerHTML = '';
 
+    const applyPlaceholderStyle = (element) => {
+      element.style.background = 'linear-gradient(180deg, #f6f2ea, #efe9dc)';
+      element.style.color = '#7a6b5d';
+      element.style.fontStyle = 'italic';
+      element.textContent = 'Rustic soap';
+    };
+
     products.forEach(p => {
       const card = document.createElement('article');
       card.className = 'product-card';
@@ -72,18 +79,14 @@
         imgEl.style.height = '100%';
         imgEl.style.objectFit = 'cover';
         imgEl.onerror = function() {
-          img.style.background = 'linear-gradient(180deg, #f6f2ea, #efe9dc)';
-          img.style.color = '#7a6b5d';
-          img.style.fontStyle = 'italic';
-          img.textContent = 'Rustic soap';
-          img.removeChild(imgEl);
+          if (imgEl.parentNode === img) {
+            img.removeChild(imgEl);
+          }
+          applyPlaceholderStyle(img);
         };
         img.appendChild(imgEl);
       } else {
-        img.style.background = 'linear-gradient(180deg, #f6f2ea, #efe9dc)';
-        img.style.color = '#7a6b5d';
-        img.style.fontStyle = 'italic';
-        img.textContent = 'Rustic soap';
+        applyPlaceholderStyle(img);
       }
 
       const title = document.createElement('div');
