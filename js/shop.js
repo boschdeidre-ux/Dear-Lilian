@@ -35,6 +35,12 @@
       title: 'Natural Body Lotion Bars',
       description: 'Nourishing solid lotion bars made with natural ingredients to moisturize and protect your skin.',
       price: 70.00
+    },
+    {
+      id: 'body-butter-01',
+      title: 'Natural Body Butters',
+      description: 'Rich, creamy body butters made with natural ingredients to deeply nourish and hydrate your skin.',
+      price: 80.00
     }
   ];
 
