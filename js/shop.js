@@ -79,8 +79,12 @@
         imgEl.style.height = '100%';
         imgEl.style.objectFit = 'cover';
         imgEl.onerror = function() {
-          if (imgEl.isConnected) {
-            img.removeChild(imgEl);
+          try {
+            if (imgEl.isConnected) {
+              img.removeChild(imgEl);
+            }
+          } catch (e) {
+            // Element already removed or not in DOM
           }
           applyPlaceholderStyle(img);
         };
