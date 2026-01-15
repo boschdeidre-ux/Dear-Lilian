@@ -389,6 +389,16 @@ body {
   opacity: 0.8;
 }
 
+@media (prefers-reduced-motion: reduce) {
+  .social-icon {
+    transition: none;
+  }
+  
+  .social-links a:hover .social-icon {
+    transform: none;
+  }
+}
+
 /* ===== Responsive Design ===== */
 @media (max-width: 768px) {
   .hero-title {
