@@ -77,7 +77,7 @@
 
     // Filter products for featured section on main page
     const isFeaturedGrid = grid.id === 'featured-grid';
-    const featuredIds = ['citrus-01', 'coffee-castoroil-01', 'body-butter-01', 'face-serum-01'];
+    const featuredIds = ['citrus-01', 'body-butter-01', 'face-serum-01'];
     const displayProducts = isFeaturedGrid 
       ? products.filter(p => featuredIds.includes(p.id))
       : products;
