@@ -1,41 +1,68 @@
 # Fonts Directory
 
-## Olivia Calligraphy Typeface Setup
+## Challista Script Font Setup
 
-The "Dear Lilian" heading is configured to use the **Olivia Calligraphy Typeface**. 
+The "Dear Lilian" heading is configured to use the **Challista Script Font**. 
 
-### Current Status
-Currently using **Alex Brush** from Google Fonts as a fallback (similar elegant script style).
+### Current Implementation
+The font is loaded via **CDNFonts** CDN in the CSS file:
+```css
+@import url('https://fonts.cdnfonts.com/css/challista');
+```
 
-### To Use the Actual Olivia Font
+### Fallback Fonts
+- **Great Vibes** from Google Fonts is used as a fallback (similar elegant script style)
+- Additional fallbacks: 'Brush Script MT', 'Lucida Handwriting', cursive
 
-1. **Download the Olivia font** from a reputable source:
-   - **Recommended**: 1001 Fonts: https://www.1001fonts.com/olivia-font.html
-   - Alternative: Dafont: https://www.dafont.com/olivia-3.font
+### Alternative: Self-Hosted Font Files
+
+If you prefer to self-host the Challista font instead of using the CDN:
+
+1. **Download the Challista font** from a reputable source:
+   - **Recommended**: CDNFonts: https://www.cdnfonts.com/challista.font
+   - Alternative: DaFont: https://www.dafont.com/challista.font
+   - Alternative: FontBundles: https://fontbundles.net/free-fonts/script-fonts/challista-script
    
-   **Important**: Always verify the license file included in the download package to ensure it permits your intended use. Download only from established font repositories to avoid security risks.
+   **Important**: Always verify the license file included in the download package to ensure it permits your intended use. The Challista font is typically free for personal use; commercial use may require a license.
 
 2. **Convert the font** (if needed) to web formats using:
    - Font Squirrel Webfont Generator: https://www.fontsquirrel.com/tools/webfont-generator
    - Or use an online TTF to WOFF/WOFF2 converter
 
-3. **Place the font files** in this directory with these exact names:
-   - `olivia-regular.woff2` (recommended, best compression)
-   - `olivia-regular.woff` (good browser support)
-   - `olivia-regular.ttf` (fallback for older browsers)
+3. **Place the font files** in this directory with these names:
+   - `challista-regular.woff2` (recommended, best compression)
+   - `challista-regular.woff` (good browser support)
+   - `challista-regular.ttf` (fallback for older browsers)
 
-4. **Verify the CSS** is already configured in `css/styles.css` with the @font-face declaration pointing to these files.
+4. **Update the CSS** in `css/styles.css` to replace the CDN import with @font-face:
+   ```css
+   @font-face {
+     font-family: 'Challista';
+     src: url('../fonts/challista-regular.woff2') format('woff2'),
+          url('../fonts/challista-regular.woff') format('woff'),
+          url('../fonts/challista-regular.ttf') format('truetype');
+     font-weight: normal;
+     font-style: normal;
+     font-display: swap;
+   }
+   ```
 
-5. **Remove the Google Fonts import** for Alex Brush from the CSS once Olivia is in place (optional).
+5. **Remove the CDN import** line from the CSS once self-hosted files are in place.
+
+### About Challista
+Challista is a modern calligraphy script font with:
+- Elegant handwritten style
+- Decorative characters and swashes
+- Perfect for invitations, branding, and creative projects
 
 ### License
-The Olivia font is generally offered as free for personal and commercial use by various distributors. **However, you must verify the specific license included in your downloaded font package** to ensure it permits your intended use. License terms may vary by source.
+The Challista font is generally offered as free for personal use. **For commercial use, verify the specific license** from your source. Some distributors may require a commercial license purchase.
 
-### File Structure
+### File Structure (if self-hosting)
 ```
 fonts/
 ├── README.md (this file)
-├── olivia-regular.woff2 (add this)
-├── olivia-regular.woff (add this)
-└── olivia-regular.ttf (add this)
+├── challista-regular.woff2 (optional - add for self-hosting)
+├── challista-regular.woff (optional - add for self-hosting)
+└── challista-regular.ttf (optional - add for self-hosting)
 ```
