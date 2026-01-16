@@ -78,7 +78,7 @@ body {
 
 /* ===== Hero Section ===== */
 .hero {
-  background: linear-gradient(rgba(246, 242, 234, 0.6), rgba(239, 233, 220, 0.6)), url('../images/background.png');
+  background: linear-gradient(rgba(246, 242, 234, 0.3), rgba(239, 233, 220, 0.3)), url('../images/background.png');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
