@@ -352,6 +352,12 @@ body {
   font-size: 1.25rem;
 }
 
+.site-footer strong {
+  display: block;
+  margin-bottom: 12px;
+  font-size: 1.25rem;
+}
+
 .site-footer p {
   line-height: 1.8;
   color: rgba(255,255,255,0.9);
