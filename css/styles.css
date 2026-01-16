@@ -102,7 +102,7 @@ body {
 }
 
 .hero-title {
-  font-family: 'Olivia', 'Alex Brush', cursive;
+  font-family: 'Olivia', 'Alex Brush', 'Brush Script MT', 'Lucida Handwriting', cursive;
   font-size: 3rem;
   font-weight: 400;
   color: var(--primary-dark);
