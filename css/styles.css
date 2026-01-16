@@ -1,5 +1,20 @@
 /* Dear Lilian - Natural Soap Shop Styles */
 
+/* ===== Font Import ===== */
+/* Olivia Calligraphy Typeface - Custom Font */
+@font-face {
+  font-family: 'Olivia';
+  src: url('../fonts/olivia-regular.woff2') format('woff2'),
+       url('../fonts/olivia-regular.woff') format('woff'),
+       url('../fonts/olivia-regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Fallback Google Font (similar style) - Remove after adding Olivia font files */
+@import url('https://fonts.googleapis.com/css2?family=Alex+Brush&display=swap');
+
 /* ===== Global Reset & Typography ===== */
 * {
   margin: 0;
@@ -87,8 +102,9 @@ body {
 }
 
 .hero-title {
+  font-family: 'Olivia', 'Alex Brush', 'Brush Script MT', 'Lucida Handwriting', cursive;
   font-size: 3rem;
-  font-weight: 700;
+  font-weight: 400;
   color: var(--primary-dark);
   margin-bottom: 16px;
   letter-spacing: 1px;
