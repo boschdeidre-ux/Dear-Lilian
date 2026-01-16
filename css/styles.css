@@ -159,6 +159,13 @@ body {
   margin-bottom: 12px;
 }
 
+.feature-logo {
+  width: 60px;
+  height: 60px;
+  margin: 0 auto 16px;
+  display: block;
+}
+
 .feature p {
   color: var(--text-muted);
   line-height: 1.7;
@@ -579,6 +586,13 @@ body {
 
 .value-item {
   margin-bottom: 24px;
+}
+
+.value-item .feature-logo {
+  width: 60px;
+  height: 60px;
+  margin: 0 0 16px 0;
+  display: block;
 }
 
 .value-item h3 {
