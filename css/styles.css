@@ -4,6 +4,9 @@
 /* Challista Script Font - CDN Font */
 @import url('https://fonts.cdnfonts.com/css/challista');
 
+/* Luna Font - CDN Font */
+@import url('https://fonts.cdnfonts.com/css/luna-4');
+
 /* Fallback Google Font (similar style) */
 @import url('https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap');
 
@@ -94,8 +97,8 @@ body {
 }
 
 .hero-title {
-  font-family: 'Challista', 'Great Vibes', 'Brush Script MT', 'Lucida Handwriting', cursive;
-  font-size: 3rem;
+  font-family: 'LUNA', 'Great Vibes', 'Brush Script MT', 'Lucida Handwriting', cursive;
+  font-size: 4rem;
   font-weight: 400;
   color: var(--primary-dark);
   margin-bottom: 16px;
@@ -428,7 +431,7 @@ body {
 /* ===== Responsive Design ===== */
 @media (max-width: 768px) {
   .hero-title {
-    font-size: 2rem;
+    font-size: 2.5rem;
   }
   
   .hero-subtitle {
