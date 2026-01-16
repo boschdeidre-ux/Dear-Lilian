@@ -159,6 +159,18 @@ body {
   margin-bottom: 12px;
 }
 
+.feature-logo {
+  width: 60px;
+  height: 60px;
+  display: block;
+  margin-bottom: 16px;
+}
+
+.feature .feature-logo {
+  margin-left: auto;
+  margin-right: auto;
+}
+
 .feature p {
   color: var(--text-muted);
   line-height: 1.7;
