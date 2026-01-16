@@ -1,4 +1,7 @@
 <svg width="60" height="60" viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <title>Truly Handmade - Verified Quality</title>
+  <desc>Hand-crafted icon with verification badge representing simple, verified, and unique handmade products</desc>
+  
   <!-- Background circle -->
   <circle cx="30" cy="30" r="28" fill="#6b8e6b" opacity="0.1"/>
   
@@ -20,7 +23,10 @@
     <path d="M13 18 C13 18 12 17 12 16.5 C12 16 12.5 15.5 13 15.5 C13.3 15.5 13.5 15.7 13.5 16 C13.5 15.7 13.7 15.5 14 15.5 C14.5 15.5 15 16 15 16.5 C15 17 14 18 14 18 L13.5 19 L13 18 Z" fill="#8ab88a"/>
   </g>
   
-  <!-- "SVU" stylized mark - Simple, Verified, Unique -->
-  <circle cx="42" cy="18" r="8" fill="#4a6e4a" opacity="0.9"/>
-  <text x="42" y="22" font-family="Arial, sans-serif" font-size="10" font-weight="bold" fill="white" text-anchor="middle">✓</text>
+  <!-- SVU verification badge - Simple, Verified, Unique -->
+  <g>
+    <circle cx="42" cy="18" r="8" fill="#4a6e4a" opacity="0.9"/>
+    <!-- Checkmark path -->
+    <path d="M39 18 L41 20 L45 15" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+  </g>
 </svg>
