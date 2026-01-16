@@ -1,0 +1,26 @@
+<svg width="60" height="60" viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <title>Sustainable Packaging - Eco-Friendly</title>
+  <desc>Recycling and eco-friendly packaging icon representing sustainable and environmentally conscious packaging</desc>
+  
+  <!-- Background circle -->
+  <circle cx="30" cy="30" r="28" fill="#6b8e6b" opacity="0.1"/>
+  
+  <!-- Recycling symbol - three arrows forming a triangle -->
+  <g transform="translate(30, 30)">
+    <!-- Top arrow (pointing down-right) -->
+    <path d="M-3,-12 L-6,-6 L0,-6 L-1,-3 L5,-9 L-1,-12 L-3,-12 Z" fill="#6b8e6b" transform="rotate(-30)"/>
+    
+    <!-- Bottom-left arrow (pointing up) -->
+    <path d="M-3,-12 L-6,-6 L0,-6 L-1,-3 L5,-9 L-1,-12 L-3,-12 Z" fill="#6b8e6b" transform="rotate(90)"/>
+    
+    <!-- Bottom-right arrow (pointing left) -->
+    <path d="M-3,-12 L-6,-6 L0,-6 L-1,-3 L5,-9 L-1,-12 L-3,-12 Z" fill="#6b8e6b" transform="rotate(210)"/>
+  </g>
+  
+  <!-- Box/Package shape in center -->
+  <g transform="translate(30, 30)">
+    <rect x="-6" y="-6" width="12" height="12" fill="#4a6e4a" opacity="0.7"/>
+    <path d="M-6,-6 L0,-3 L6,-6" stroke="#8ab88a" stroke-width="1.5" fill="none"/>
+    <line x1="0" y1="-3" x2="0" y2="6" stroke="#8ab88a" stroke-width="1.5"/>
+  </g>
+</svg>
