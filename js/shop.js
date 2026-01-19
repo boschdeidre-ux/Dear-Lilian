@@ -86,7 +86,6 @@
       const card = document.createElement('article');
       card.className = 'product-card';
       // Make the card clickable to view details
-      card.style.cursor = 'pointer';
       card.addEventListener('click', (e) => {
         // Don't navigate if clicking the Add to Bag button
         if (!e.target.closest('.btn')) {

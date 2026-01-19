@@ -160,7 +160,11 @@
     const productReviews = reviews[productId] || [];
 
     if (productReviews.length === 0) {
-      reviewsList.innerHTML = '<p class="text-muted" style="text-align: center;">No reviews yet. Be the first to review this product!</p>';
+      const noReviewsMsg = document.createElement('p');
+      noReviewsMsg.className = 'text-muted text-center';
+      noReviewsMsg.textContent = 'No reviews yet. Be the first to review this product!';
+      reviewsList.innerHTML = '';
+      reviewsList.appendChild(noReviewsMsg);
       return;
     }
 
