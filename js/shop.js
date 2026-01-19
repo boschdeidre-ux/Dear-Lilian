@@ -45,13 +45,13 @@
     {
       id: 'whipped-body-butter-01',
       title: 'Whipped Body Butter',
-      description: 'Light, airy whipped body butter that melts into your skin, providing deep moisture without the greasy feel.',
+      description: 'Light, airy whipped body butter that melts into your skin, providing deep moisture without the greasy feel. 100ml.',
       price: 200.00
     },
     {
       id: 'face-serum-01',
       title: 'Natural Face Serum',
-      description: 'Made-to-order nourishing face serum. Ingredients: flaxseed gel, castor oil, frankincense essential oil.',
+      description: 'Made-to-order nourishing face serum. Ingredients: flaxseed gel, castor oil, frankincense essential oil. 30ml.',
       price: 90.00
     }
   ];
