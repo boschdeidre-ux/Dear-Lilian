@@ -213,6 +213,7 @@ body {
   box-shadow: var(--shadow);
   transition: transform 0.2s, box-shadow 0.2s;
   text-align: left;
+  cursor: pointer;
 }
 
 .product-card:hover {
@@ -890,17 +891,6 @@ body {
 .review-text {
   line-height: 1.8;
   color: var(--text-color);
-}
-
-/* Make product cards clickable */
-.product-card {
-  cursor: pointer;
-  transition: transform 0.2s, box-shadow 0.2s;
-}
-
-.product-card:hover {
-  transform: translateY(-4px);
-  box-shadow: var(--shadow-hover);
 }
 
 @media (max-width: 768px) {
