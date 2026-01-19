@@ -1,0 +1,126 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Product Details - Dear Lilian</title>
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="index.html">Dear Lilian</a>
+      <nav class="main-nav" aria-label="Main navigation">
+        <a href="index.html">Home</a>
+        <a href="shop.html">Shop</a>
+        <a href="about.html">About</a>
+        <a href="benefits.html">Benefits</a>
+        <a href="contact.html">Contact</a>
+        <button id="cart-toggle" aria-controls="cart" aria-expanded="false">My Bag (<span id="cart-count">0</span>)</button>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container page-container">
+    <div class="product-detail-container">
+      <!-- Product Main Section -->
+      <div class="product-detail-grid">
+        <div class="product-detail-image">
+          <img id="product-image" src="" alt="" />
+        </div>
+        
+        <div class="product-detail-info">
+          <h1 id="product-title" class="product-detail-title"></h1>
+          <div id="product-price" class="product-detail-price"></div>
+          <div id="product-description" class="product-detail-description"></div>
+          
+          <!-- Quantity Selector with Icon -->
+          <div class="product-quantity">
+            <label for="quantity">
+              <svg class="quantity-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                <path d="M19 3H5C3.89 3 3 3.89 3 5V19C3 20.1 3.89 21 5 21H19C20.1 21 21 20.1 21 19V5C21 3.89 20.1 3 19 3ZM19 19H5V5H19V19Z" fill="currentColor"/>
+                <path d="M11 17H13V13H17V11H13V7H11V11H7V13H11V17Z" fill="currentColor"/>
+              </svg>
+              Amount:
+            </label>
+            <div class="quantity-selector">
+              <button id="decrease-qty" class="qty-btn" aria-label="Decrease quantity">-</button>
+              <input type="number" id="quantity" name="quantity" value="1" min="1" max="99" aria-label="Product quantity" />
+              <button id="increase-qty" class="qty-btn" aria-label="Increase quantity">+</button>
+            </div>
+          </div>
+          
+          <button id="add-to-bag" class="btn primary btn-full">Add to Bag</button>
+        </div>
+      </div>
+
+      <!-- Additional Information Section -->
+      <div class="product-additional-info">
+        <h2>Additional Information</h2>
+        <div class="info-grid">
+          <div class="info-item">
+            <h3>Ingredients</h3>
+            <p id="product-ingredients">Natural ingredients including essential oils, tallow, olive oil, and coconut oil.</p>
+          </div>
+          <div class="info-item">
+            <h3>Weight</h3>
+            <p id="product-weight">Approximately 100g per bar</p>
+          </div>
+          <div class="info-item">
+            <h3>Care Instructions</h3>
+            <p>Keep soap dry between uses. Store in a well-drained soap dish to extend its life.</p>
+          </div>
+          <div class="info-item">
+            <h3>Packaging</h3>
+            <p>Eco-friendly recycled paper packaging, minimal plastic use.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Reviews Section -->
+      <div class="product-reviews">
+        <h2>Customer Reviews</h2>
+        <div class="reviews-summary">
+          <div class="rating-display">
+            <span class="stars">★★★★★</span>
+            <span class="rating-text">5.0 out of 5</span>
+          </div>
+          <p class="reviews-count">Based on 12 reviews</p>
+        </div>
+        
+        <div class="reviews-list" id="reviews-list">
+          <!-- Reviews will be populated here -->
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <aside id="cart" class="cart" aria-hidden="true">
+    <div class="cart-inner">
+      <button id="cart-close" aria-label="Close bag">✕</button>
+      <h3>My Bag</h3>
+      <ul id="cart-items" class="cart-items"></ul>
+      <div class="cart-summary">
+        <div>Subtotal: <strong id="cart-subtotal">ZAR0.00</strong></div>
+        <button id="checkout-btn" class="btn primary">Checkout</button>
+      </div>
+    </div>
+  </aside>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div>
+        <strong>Dear Lilian</strong>
+        <p>Handmade natural soaps. Based in Johannesburg.</p>
+      </div>
+      <div>
+        <h4>Contact</h4>
+        <p><a href="contact.html">Contact form</a> • <a href="mailto:bosch.deidre@gmail.com">bosch.deidre@gmail.com</a></p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/shop.js" defer></script>
+  <script src="js/product-detail.js" defer></script>
+</body>
+</html>

@@ -85,6 +85,13 @@
     displayProducts.forEach(p => {
       const card = document.createElement('article');
       card.className = 'product-card';
+      // Make the card clickable to view details
+      card.addEventListener('click', (e) => {
+        // Don't navigate if clicking the Add to Bag button
+        if (!e.target.closest('.btn')) {
+          window.location.href = `product-detail.html?id=${p.id}`;
+        }
+      });
 
       const img = document.createElement('div');
       img.className = 'product-image';
@@ -137,7 +144,10 @@
       const addBtn = document.createElement('button');
       addBtn.className = 'btn primary';
       addBtn.textContent = 'Add to Bag';
-      addBtn.addEventListener('click', () => addToCart(p));
+      addBtn.addEventListener('click', (e) => {
+        e.stopPropagation(); // Prevent card click
+        addToCart(p);
+      });
 
       actions.appendChild(addBtn);
 
@@ -213,6 +223,17 @@
   document.addEventListener('DOMContentLoaded', ()=>{
     renderProducts();
     initCartControls();
+    updateCartUI();
+  });
+
+  // Listen for addToCart events from product detail page
+  window.addEventListener('addToCart', (e) => {
+    const { product, quantity } = e.detail;
+    if (!cart.items[product.id]) {
+      cart.items[product.id] = { product, qty: 0 };
+    }
+    cart.items[product.id].qty += quantity;
+    cart.subtotal = Object.values(cart.items).reduce((s, i) => s + (i.product.price * i.qty), 0);
     updateCartUI();
   });
 })();
