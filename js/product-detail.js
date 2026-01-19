@@ -109,8 +109,8 @@
   function renderProductDetail() {
     const product = getProductFromURL();
     if (!product) {
-      // Redirect to shop if no product found
-      window.location.href = 'shop.html';
+      // Redirect to home if no product found
+      window.location.href = 'index.html';
       return;
     }
 
