@@ -230,11 +230,11 @@
   // Listen for addToCart events from product detail page
   window.addEventListener('addToCart', (e) => {
     const { product, quantity } = e.detail;
-    if(!cart.items[product.id]){
+    if (!cart.items[product.id]) {
       cart.items[product.id] = { product, qty: 0 };
     }
     cart.items[product.id].qty += quantity;
-    cart.subtotal = Object.values(cart.items).reduce((s,i)=>s + (i.product.price * i.qty), 0);
+    cart.subtotal = Object.values(cart.items).reduce((s, i) => s + (i.product.price * i.qty), 0);
     updateCartUI();
   });
 })();
