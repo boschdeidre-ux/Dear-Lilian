@@ -39,8 +39,8 @@
     {
       id: 'body-butter-01',
       title: 'Natural Body Butters',
-      description: 'Rich, creamy body butters made with natural ingredients to deeply nourish and hydrate your skin.',
-      price: 80.00
+      description: 'Rich, creamy body butters made with natural ingredients to deeply nourish and hydrate your skin. Comes in 100ml containers.',
+      price: 150.00
     },
     {
       id: 'whipped-body-butter-01',
