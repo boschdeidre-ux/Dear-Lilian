@@ -171,14 +171,31 @@
       
       const stars = '★'.repeat(review.rating) + '☆'.repeat(5 - review.rating);
       
-      reviewItem.innerHTML = `
-        <div class="review-header">
-          <span class="review-author">${review.author}</span>
-          <span class="review-stars">${stars}</span>
-        </div>
-        <div class="review-date">${review.date}</div>
-        <div class="review-text">${review.text}</div>
-      `;
+      const reviewHeader = document.createElement('div');
+      reviewHeader.className = 'review-header';
+      
+      const authorSpan = document.createElement('span');
+      authorSpan.className = 'review-author';
+      authorSpan.textContent = review.author;
+      
+      const starsSpan = document.createElement('span');
+      starsSpan.className = 'review-stars';
+      starsSpan.textContent = stars;
+      
+      reviewHeader.appendChild(authorSpan);
+      reviewHeader.appendChild(starsSpan);
+      
+      const dateDiv = document.createElement('div');
+      dateDiv.className = 'review-date';
+      dateDiv.textContent = review.date;
+      
+      const textDiv = document.createElement('div');
+      textDiv.className = 'review-text';
+      textDiv.textContent = review.text;
+      
+      reviewItem.appendChild(reviewHeader);
+      reviewItem.appendChild(dateDiv);
+      reviewItem.appendChild(textDiv);
       
       reviewsList.appendChild(reviewItem);
     });
