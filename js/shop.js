@@ -264,13 +264,13 @@
     // Close button handler
     const closeBtn = modal.querySelector('.paypal-modal-close');
     closeBtn.addEventListener('click', () => {
-      document.body.removeChild(modal);
+      modal.remove();
     });
     
     // Close on background click
     modal.addEventListener('click', (e) => {
       if(e.target === modal){
-        document.body.removeChild(modal);
+        modal.remove();
       }
     });
     
@@ -319,7 +319,7 @@
           // Close modal
           const modal = document.getElementById('paypal-modal');
           if(modal){
-            document.body.removeChild(modal);
+            modal.remove();
           }
           
           // Show success message

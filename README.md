@@ -13,6 +13,29 @@ This website can be viewed live using GitHub Pages. To enable it:
 
 Once enabled, your website will be automatically deployed and accessible at the provided URL.
 
+## PayPal Configuration
+
+This website includes PayPal integration for checkout. Before deploying to production:
+
+1. Create a PayPal business account at https://www.paypal.com/business
+2. Get your PayPal client ID from the PayPal Developer Dashboard
+3. Replace `client-id=test` with your actual client ID in all HTML files:
+   - `shop.html`
+   - `product-detail.html`
+   - `index.html`
+   - `about.html`
+   - `benefits.html`
+   - `contact.html`
+
+Example:
+```html
+<!-- Replace this: -->
+<script src="https://www.paypal.com/sdk/js?client-id=test&currency=ZAR"></script>
+
+<!-- With your actual client ID: -->
+<script src="https://www.paypal.com/sdk/js?client-id=YOUR_CLIENT_ID&currency=ZAR"></script>
+```
+
 ## Local Development
 
 To view the website locally:
