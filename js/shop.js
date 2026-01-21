@@ -203,6 +203,8 @@
     const toggle = document.getElementById('cart-toggle');
     const close = document.getElementById('cart-close');
     const cartEl = document.getElementById('cart');
+    const checkoutBtn = document.getElementById('checkout-btn');
+    
     if(toggle && cartEl){
       toggle.addEventListener('click', ()=>{
         const hidden = cartEl.getAttribute('aria-hidden') === 'true';
@@ -218,6 +220,129 @@
         if(toggle) toggle.setAttribute('aria-expanded', 'false');
       });
     }
+    if(checkoutBtn){
+      checkoutBtn.addEventListener('click', handleCheckout);
+    }
+  }
+
+  function handleCheckout(){
+    if(Object.keys(cart.items).length === 0){
+      alert('Your bag is empty. Please add items before checking out.');
+      return;
+    }
+    
+    // Show PayPal modal
+    showPayPalModal();
+  }
+
+  function showPayPalModal(){
+    // Create modal
+    const modal = document.createElement('div');
+    modal.id = 'paypal-modal';
+    modal.className = 'paypal-modal';
+    modal.innerHTML = `
+      <div class="paypal-modal-content">
+        <button class="paypal-modal-close" aria-label="Close">&times;</button>
+        <h2>Complete Your Purchase</h2>
+        <div class="paypal-order-summary">
+          <h3>Order Summary</h3>
+          <ul class="paypal-order-items">
+            ${Object.values(cart.items).map(({product, qty}) => 
+              `<li>${product.title} x ${qty} - ${formatCurrency(product.price * qty)}</li>`
+            ).join('')}
+          </ul>
+          <div class="paypal-order-total">
+            <strong>Total: ${formatCurrency(cart.subtotal)}</strong>
+          </div>
+        </div>
+        <div id="paypal-button-container"></div>
+      </div>
+    `;
+    
+    document.body.appendChild(modal);
+    
+    // Close button handler
+    const closeBtn = modal.querySelector('.paypal-modal-close');
+    closeBtn.addEventListener('click', () => {
+      document.body.removeChild(modal);
+    });
+    
+    // Close on background click
+    modal.addEventListener('click', (e) => {
+      if(e.target === modal){
+        document.body.removeChild(modal);
+      }
+    });
+    
+    // Initialize PayPal button
+    initPayPalButton();
+  }
+
+  function initPayPalButton(){
+    // Check if PayPal SDK is loaded
+    if(typeof paypal === 'undefined'){
+      const container = document.getElementById('paypal-button-container');
+      container.innerHTML = '<p style="color: #d32f2f; text-align: center;">PayPal SDK not loaded. Please refresh the page and try again.</p>';
+      return;
+    }
+    
+    paypal.Buttons({
+      createOrder: function(data, actions) {
+        // Create order with cart items
+        const items = Object.values(cart.items).map(({product, qty}) => ({
+          name: product.title,
+          unit_amount: {
+            currency_code: 'ZAR',
+            value: product.price.toFixed(2)
+          },
+          quantity: qty
+        }));
+        
+        return actions.order.create({
+          purchase_units: [{
+            amount: {
+              currency_code: 'ZAR',
+              value: cart.subtotal.toFixed(2),
+              breakdown: {
+                item_total: {
+                  currency_code: 'ZAR',
+                  value: cart.subtotal.toFixed(2)
+                }
+              }
+            },
+            items: items
+          }]
+        });
+      },
+      onApprove: function(data, actions) {
+        return actions.order.capture().then(function(details) {
+          // Close modal
+          const modal = document.getElementById('paypal-modal');
+          if(modal){
+            document.body.removeChild(modal);
+          }
+          
+          // Show success message
+          alert('Thank you for your purchase, ' + details.payer.name.given_name + '! Your order has been completed.');
+          
+          // Clear cart
+          cart.items = {};
+          cart.subtotal = 0;
+          updateCartUI();
+          
+          // Close cart sidebar
+          const cartEl = document.getElementById('cart');
+          if(cartEl){
+            cartEl.setAttribute('aria-hidden', 'true');
+            cartEl.classList.remove('open');
+          }
+        });
+      },
+      onError: function(err) {
+        console.error('PayPal Error:', err);
+        alert('An error occurred during checkout. Please try again.');
+      }
+    }).render('#paypal-button-container');
   }
 
   document.addEventListener('DOMContentLoaded', ()=>{
