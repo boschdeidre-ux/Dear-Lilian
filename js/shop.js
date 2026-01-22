@@ -403,8 +403,8 @@
         console.error('PayPal Error:', err);
         
         // Update order status to failed
-        if (currentOrderId) {
-          orderEngine.updateOrderStatus(currentOrderId, OrderStatus.FAILED);
+        if (currentOrderId && orderEngine) {
+          orderEngine.updateOrderStatus(currentOrderId, 'failed');
           console.log('Order marked as failed:', currentOrderId);
         }
         
