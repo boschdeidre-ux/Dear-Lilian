@@ -2,6 +2,12 @@
 (function(){
   'use strict';
 
+  // Initialize order engine
+  let orderEngine = null;
+  
+  // Current order ID during checkout
+  let currentOrderId = null;
+
   // Sample product data
   const products = [
     {
@@ -231,8 +237,40 @@
       return;
     }
     
-    // Show PayPal modal
-    showPayPalModal();
+    // Create order using order engine
+    try {
+      const orderData = prepareOrderData();
+      const order = orderEngine.createOrder(orderData);
+      currentOrderId = order.id;
+      console.log('Order created:', order);
+      
+      // Show PayPal modal
+      showPayPalModal();
+    } catch (error) {
+      console.error('Error creating order:', error);
+      alert('Error creating order. Please try again.');
+    }
+  }
+
+  function prepareOrderData(){
+    const items = Object.values(cart.items).map(({product, qty}) => ({
+      id: product.id,
+      name: product.title,
+      price: product.price,
+      quantity: qty
+    }));
+    
+    return {
+      items: items,
+      customer: {
+        // Customer info can be added later if needed
+      },
+      paymentMethod: 'paypal',
+      metadata: {
+        source: 'web',
+        cartSubtotal: cart.subtotal
+      }
+    };
   }
 
   function showPayPalModal(){
@@ -316,14 +354,37 @@
       },
       onApprove: function(data, actions) {
         return actions.order.capture().then(function(details) {
+          // Process payment through order engine
+          if (currentOrderId) {
+            const paymentData = {
+              transactionId: data.orderID,
+              payerInfo: {
+                name: details.payer.name.given_name + ' ' + (details.payer.name.surname || ''),
+                email: details.payer.email_address,
+                payerId: details.payer.payer_id
+              }
+            };
+            
+            const result = orderEngine.processPayment(currentOrderId, paymentData);
+            console.log('Payment processed:', result);
+            
+            if (result.success) {
+              console.log('Order completed successfully:', result.order);
+            }
+          }
+          
           // Close modal
           const modal = document.getElementById('paypal-modal');
           if(modal){
             modal.remove();
           }
           
-          // Show success message
-          alert('Thank you for your purchase, ' + details.payer.name.given_name + '! Your order has been completed.');
+          // Show success message with order ID
+          const orderIdMsg = currentOrderId ? `\nOrder ID: ${currentOrderId}` : '';
+          alert('Thank you for your purchase, ' + details.payer.name.given_name + '! Your order has been completed.' + orderIdMsg);
+          
+          // Clear current order
+          currentOrderId = null;
           
           // Clear cart
           cart.items = {};
@@ -340,12 +401,31 @@
       },
       onError: function(err) {
         console.error('PayPal Error:', err);
+        
+        // Update order status to failed
+        if (currentOrderId) {
+          orderEngine.updateOrderStatus(currentOrderId, OrderStatus.FAILED);
+          console.log('Order marked as failed:', currentOrderId);
+        }
+        
         alert('An error occurred during checkout. Please try again.');
       }
     }).render('#paypal-button-container');
   }
 
   document.addEventListener('DOMContentLoaded', ()=>{
+    // Initialize order engine
+    if (typeof OrderEngine !== 'undefined') {
+      orderEngine = new OrderEngine();
+      console.log('Order engine initialized');
+      
+      // Log order stats for debugging
+      const stats = orderEngine.getOrderStats();
+      console.log('Order statistics:', stats);
+    } else {
+      console.warn('OrderEngine not available. Make sure order-engine.js is loaded.');
+    }
+    
     renderProducts();
     initCartControls();
     updateCartUI();
