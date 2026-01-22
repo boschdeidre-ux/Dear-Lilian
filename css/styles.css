@@ -429,6 +429,66 @@ body {
   }
 }
 
+/* Newsletter Form Styles */
+.newsletter-section {
+  max-width: 400px;
+}
+
+.newsletter-form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-top: 16px;
+}
+
+.newsletter-input {
+  width: 100%;
+  padding: 12px 16px;
+  font-size: 1rem;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 4px;
+  background: rgba(255, 255, 255, 0.1);
+  color: var(--white);
+  transition: border-color 0.2s, background 0.2s;
+}
+
+.newsletter-input::placeholder {
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.newsletter-input:focus {
+  outline: none;
+  border-color: rgba(255, 255, 255, 0.6);
+  background: rgba(255, 255, 255, 0.15);
+}
+
+.newsletter-checkbox {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  font-size: 0.9rem;
+  line-height: 1.4;
+}
+
+.newsletter-checkbox input[type="checkbox"] {
+  margin-top: 2px;
+  width: 18px;
+  height: 18px;
+  flex-shrink: 0;
+  cursor: pointer;
+}
+
+.newsletter-checkbox label {
+  color: rgba(255, 255, 255, 0.9);
+  cursor: pointer;
+}
+
+.newsletter-submit {
+  align-self: flex-start;
+  padding: 12px 32px;
+  font-size: 1rem;
+}
+
 /* ===== Responsive Design ===== */
 @media (max-width: 768px) {
   .hero-title {
