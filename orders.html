@@ -1,0 +1,312 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Order History - Dear Lilian</title>
+  <link rel="stylesheet" href="css/styles.css" />
+  <style>
+    .orders-container {
+      max-width: 1000px;
+      margin: 0 auto;
+      padding: 2rem 1rem;
+    }
+    
+    .order-card {
+      background: #fff;
+      border: 1px solid #e0e0e0;
+      border-radius: 8px;
+      padding: 1.5rem;
+      margin-bottom: 1.5rem;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+    }
+    
+    .order-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 1rem;
+      padding-bottom: 1rem;
+      border-bottom: 1px solid #e0e0e0;
+    }
+    
+    .order-id {
+      font-weight: bold;
+      color: #333;
+    }
+    
+    .order-status {
+      padding: 0.25rem 0.75rem;
+      border-radius: 12px;
+      font-size: 0.875rem;
+      font-weight: 500;
+      text-transform: capitalize;
+    }
+    
+    .order-status.pending {
+      background: #fff3cd;
+      color: #856404;
+    }
+    
+    .order-status.processing {
+      background: #cfe2ff;
+      color: #084298;
+    }
+    
+    .order-status.completed {
+      background: #d1e7dd;
+      color: #0f5132;
+    }
+    
+    .order-status.failed {
+      background: #f8d7da;
+      color: #842029;
+    }
+    
+    .order-status.cancelled {
+      background: #e2e3e5;
+      color: #41464b;
+    }
+    
+    .order-date {
+      color: #666;
+      font-size: 0.875rem;
+      margin-bottom: 0.5rem;
+    }
+    
+    .order-items {
+      list-style: none;
+      padding: 0;
+      margin: 1rem 0;
+    }
+    
+    .order-item {
+      display: flex;
+      justify-content: space-between;
+      padding: 0.5rem 0;
+      border-bottom: 1px solid #f0f0f0;
+    }
+    
+    .order-item:last-child {
+      border-bottom: none;
+    }
+    
+    .order-total {
+      text-align: right;
+      font-size: 1.125rem;
+      font-weight: bold;
+      margin-top: 1rem;
+      padding-top: 1rem;
+      border-top: 2px solid #e0e0e0;
+    }
+    
+    .no-orders {
+      text-align: center;
+      padding: 3rem 1rem;
+      color: #666;
+    }
+    
+    .order-stats {
+      background: #f8f9fa;
+      border-radius: 8px;
+      padding: 1.5rem;
+      margin-bottom: 2rem;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+      gap: 1rem;
+    }
+    
+    .stat-item {
+      text-align: center;
+    }
+    
+    .stat-value {
+      font-size: 1.5rem;
+      font-weight: bold;
+      color: #7a6b5d;
+      display: block;
+    }
+    
+    .stat-label {
+      font-size: 0.875rem;
+      color: #666;
+      display: block;
+      margin-top: 0.25rem;
+    }
+  </style>
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="index.html">Dear Lilian</a>
+      <nav class="main-nav" aria-label="Main navigation">
+        <a href="index.html">Home</a>
+        <a href="shop.html">Shop</a>
+        <a href="about.html">About</a>
+        <a href="benefits.html">Benefits</a>
+        <a href="contact.html">Contact</a>
+        <button id="cart-toggle" aria-controls="cart" aria-expanded="false">My Bag (<span id="cart-count">0</span>)</button>
+      </nav>
+    </div>
+  </header>
+
+  <main class="orders-container">
+    <h1>Order History</h1>
+    <p class="muted">View all your past orders and their status</p>
+    
+    <div id="order-stats" class="order-stats">
+      <!-- Stats will be rendered here -->
+    </div>
+    
+    <div id="orders-list">
+      <!-- Orders will be rendered here -->
+    </div>
+  </main>
+
+  <aside id="cart" class="cart" aria-hidden="true">
+    <div class="cart-inner">
+      <button id="cart-close" aria-label="Close bag">✕</button>
+      <h3>My Bag</h3>
+      <ul id="cart-items" class="cart-items"></ul>
+      <div class="cart-summary">
+        <div>Subtotal: <strong id="cart-subtotal">ZAR0.00</strong></div>
+        <button id="checkout-btn" class="btn primary">Checkout</button>
+      </div>
+    </div>
+  </aside>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div>
+        <strong>Dear Lilian</strong>
+        <p>Handmade natural soaps. Based in Johannesburg.</p>
+      </div>
+      <div>
+        <h4>Follow Us</h4>
+        <div class="social-links">
+          <a href="https://www.facebook.com/Naturally.Tallow/" target="_blank" rel="noopener noreferrer" aria-label="Visit our Facebook page">
+            <svg class="social-icon" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+              <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+            </svg>
+          </a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- PayPal SDK -->
+  <script src="https://www.paypal.com/sdk/js?client-id=test&currency=ZAR" data-sdk-integration-source="button-factory"></script>
+  
+  <!-- Order Engine -->
+  <script src="js/order-engine.js"></script>
+  
+  <script src="js/shop.js" defer></script>
+  
+  <script>
+    const formatCurrency = (v) => {
+      try {
+        return new Intl.NumberFormat('en-ZA', { style: 'currency', currency: 'ZAR' }).format(v);
+      } catch (e) {
+        return `ZAR${v.toFixed(2)}`;
+      }
+    };
+    
+    const formatDate = (isoString) => {
+      const date = new Date(isoString);
+      return date.toLocaleDateString('en-ZA', { 
+        year: 'numeric', 
+        month: 'long', 
+        day: 'numeric',
+        hour: '2-digit',
+        minute: '2-digit'
+      });
+    };
+    
+    function renderOrderStats(stats) {
+      const statsContainer = document.getElementById('order-stats');
+      statsContainer.innerHTML = `
+        <div class="stat-item">
+          <span class="stat-value">${stats.total}</span>
+          <span class="stat-label">Total Orders</span>
+        </div>
+        <div class="stat-item">
+          <span class="stat-value">${stats.completed}</span>
+          <span class="stat-label">Completed</span>
+        </div>
+        <div class="stat-item">
+          <span class="stat-value">${stats.pending + stats.processing}</span>
+          <span class="stat-label">In Progress</span>
+        </div>
+        <div class="stat-item">
+          <span class="stat-value">${formatCurrency(stats.totalRevenue)}</span>
+          <span class="stat-label">Total Revenue</span>
+        </div>
+      `;
+    }
+    
+    function renderOrders() {
+      const ordersList = document.getElementById('orders-list');
+      
+      if (typeof OrderEngine === 'undefined') {
+        ordersList.innerHTML = '<div class="no-orders">Order engine not available. Please refresh the page.</div>';
+        return;
+      }
+      
+      const orderEngine = new OrderEngine();
+      const orders = orderEngine.getAllOrders();
+      const stats = orderEngine.getOrderStats();
+      
+      renderOrderStats(stats);
+      
+      if (orders.length === 0) {
+        ordersList.innerHTML = `
+          <div class="no-orders">
+            <p>You don't have any orders yet.</p>
+            <a href="shop.html" class="btn primary">Start Shopping</a>
+          </div>
+        `;
+        return;
+      }
+      
+      ordersList.innerHTML = '';
+      
+      orders.forEach(order => {
+        const orderCard = document.createElement('div');
+        orderCard.className = 'order-card';
+        
+        const itemsList = order.items.map(item => `
+          <li class="order-item">
+            <span>${item.name} × ${item.quantity}</span>
+            <span>${formatCurrency(item.price * item.quantity)}</span>
+          </li>
+        `).join('');
+        
+        const transactionInfo = order.payment.transactionId 
+          ? `<div style="font-size: 0.875rem; color: #666; margin-top: 0.5rem;">Transaction ID: ${order.payment.transactionId}</div>`
+          : '';
+        
+        orderCard.innerHTML = `
+          <div class="order-header">
+            <div>
+              <div class="order-id">${order.id}</div>
+              <div class="order-date">${formatDate(order.timestamps.created)}</div>
+            </div>
+            <span class="order-status ${order.status}">${order.status}</span>
+          </div>
+          <ul class="order-items">
+            ${itemsList}
+          </ul>
+          <div class="order-total">
+            Total: ${formatCurrency(order.payment.amount)}
+          </div>
+          ${transactionInfo}
+        `;
+        
+        ordersList.appendChild(orderCard);
+      });
+    }
+    
+    document.addEventListener('DOMContentLoaded', renderOrders);
+  </script>
+</body>
+</html>
