@@ -81,13 +81,16 @@
 
   <footer class="site-footer">
     <div class="container footer-inner">
-      <div>
-        <strong>Dear Lilian</strong>
-        <p>Handmade natural soaps. Based in Johannesburg.</p>
-      </div>
-      <div>
-        <h4>Contact</h4>
-        <p><a href="contact.html">Contact form</a> • <a href="mailto:bosch.deidre@gmail.com">bosch.deidre@gmail.com</a></p>
+      <div class="newsletter-section">
+        <h4>Stay tuned for updates</h4>
+        <form class="newsletter-form" id="newsletter-form">
+          <input type="email" id="newsletter-email" class="newsletter-input" placeholder="Enter your email address" required aria-label="Email address">
+          <div class="newsletter-checkbox">
+            <input type="checkbox" id="terms-checkbox" required>
+            <label for="terms-checkbox">I have read and agree to the terms and conditions</label>
+          </div>
+          <button type="submit" class="btn primary newsletter-submit">Submit</button>
+        </form>
       </div>
       <div>
         <h4>Follow Us</h4>
