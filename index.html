@@ -87,7 +87,7 @@
           <input type="email" id="newsletter-email" class="newsletter-input" placeholder="Enter your email address" required aria-label="Email address">
           <div class="newsletter-checkbox">
             <input type="checkbox" id="terms-checkbox" required>
-            <label for="terms-checkbox">I have read and agree to the terms and conditions</label>
+            <label for="terms-checkbox">I agree to receive email updates</label>
           </div>
           <button type="submit" class="btn primary newsletter-submit">Submit</button>
         </form>
@@ -134,5 +134,19 @@
   <script src="https://www.paypal.com/sdk/js?client-id=test&currency=ZAR" data-sdk-integration-source="button-factory"></script>
   
   <script src="js/shop.js" defer></script>
+  
+  <!-- Newsletter Form Handler -->
+  <script>
+    document.getElementById('newsletter-form').addEventListener('submit', function(e) {
+      e.preventDefault();
+      const email = document.getElementById('newsletter-email').value;
+      const checkbox = document.getElementById('terms-checkbox').checked;
+      
+      if (email && checkbox) {
+        alert('Thank you for subscribing! You will receive updates at ' + email);
+        this.reset();
+      }
+    });
+  </script>
 </body>
 </html>
