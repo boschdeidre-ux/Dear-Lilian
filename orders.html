@@ -142,7 +142,14 @@
       <nav class="main-nav" aria-label="Main navigation">
         <a href="index.html">Home</a>
         <a href="shop.html">Shop</a>
-        <a href="about.html">About</a>
+        <div class="dropdown">
+          <a href="about.html" class="dropdown-toggle" aria-haspopup="menu">About ▾</a>
+          <div class="dropdown-menu">
+            <a href="about.html#founder">About the founder</a>
+            <a href="about.html#products">About the products</a>
+            <a href="about.html#ingredients">About the ingredients</a>
+          </div>
+        </div>
         <a href="benefits.html">Benefits</a>
         <a href="contact.html">Contact</a>
         <button id="cart-toggle" aria-controls="cart" aria-expanded="false">My Bag (<span id="cart-count">0</span>)</button>
