@@ -129,7 +129,11 @@ body {
   border-bottom: none;
 }
 
-.dropdown-menu a:hover,
+.dropdown-menu a:hover {
+  background: var(--bg-light);
+  color: var(--primary-color);
+}
+
 .dropdown-menu a:focus {
   background: var(--bg-light);
   color: var(--primary-color);
