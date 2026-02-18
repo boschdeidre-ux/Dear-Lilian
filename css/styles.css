@@ -86,6 +86,53 @@ body {
   color: var(--primary-color);
 }
 
+/* Dropdown Menu Styles */
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-toggle {
+  cursor: pointer;
+}
+
+.dropdown-menu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background: var(--white);
+  min-width: 200px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+  border-radius: 6px;
+  margin-top: 8px;
+  z-index: 1000;
+  overflow: hidden;
+}
+
+.dropdown:hover .dropdown-menu {
+  display: block;
+}
+
+.dropdown-menu a {
+  display: block;
+  padding: 12px 20px;
+  color: var(--text-color);
+  text-decoration: none;
+  font-weight: 500;
+  transition: background 0.2s, color 0.2s;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.dropdown-menu a:last-child {
+  border-bottom: none;
+}
+
+.dropdown-menu a:hover {
+  background: var(--bg-light);
+  color: var(--primary-color);
+}
+
 /* ===== Hero Section ===== */
 .hero {
   background: linear-gradient(rgba(246, 242, 234, 0.15), rgba(239, 233, 220, 0.15)), url('../images/background.png');

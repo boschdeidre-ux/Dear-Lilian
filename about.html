@@ -13,7 +13,14 @@
       <nav class="main-nav" aria-label="Main navigation">
         <a href="index.html">Home</a>
         <a href="shop.html">Shop</a>
-        <a href="about.html" aria-current="page">About</a>
+        <div class="dropdown">
+          <a href="about.html" class="dropdown-toggle" aria-current="page">About ▾</a>
+          <div class="dropdown-menu">
+            <a href="about.html#founder">About the founder</a>
+            <a href="about.html#products">About the Products</a>
+            <a href="about.html#ingredients">About the ingredients</a>
+          </div>
+        </div>
         <a href="benefits.html">Benefits</a>
         <a href="contact.html">Contact</a>
         <button id="cart-toggle" aria-controls="cart" aria-expanded="false">My Bag (<span id="cart-count">0</span>)</button>
@@ -25,7 +32,7 @@
     <div class="page-container">
       <h1 class="page-title text-center">About Dear Lilian</h1>
       
-      <div class="story-box">
+      <div class="story-box" id="founder">
         <h2>Our Story</h2>
         <img src="images/Deidre.jpg" alt="Deidrè Bosch, founder of Dear Lilian" class="founder-photo">
         <p>
@@ -43,7 +50,7 @@
         </p>
       </div>
 
-      <div class="story-box">
+      <div class="story-box" id="products">
         <h2>About our handmade soap</h2>
         <p>
           At Dear Lilian, each bar is carefully crafted in small batches to ensure the highest quality 
@@ -66,7 +73,7 @@
         </p>
       </div>
 
-      <div class="values-section">
+      <div class="values-section" id="ingredients">
         <h2>Our Values</h2>
         
         <article class="value-item">
