@@ -110,7 +110,8 @@ body {
   overflow: hidden;
 }
 
-.dropdown:hover .dropdown-menu {
+.dropdown:hover .dropdown-menu,
+.dropdown:focus-within .dropdown-menu {
   display: block;
 }
 
@@ -128,9 +129,12 @@ body {
   border-bottom: none;
 }
 
-.dropdown-menu a:hover {
+.dropdown-menu a:hover,
+.dropdown-menu a:focus {
   background: var(--bg-light);
   color: var(--primary-color);
+  outline: 2px solid var(--primary-color);
+  outline-offset: -2px;
 }
 
 /* ===== Hero Section ===== */
