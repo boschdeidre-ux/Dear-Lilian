@@ -21,7 +21,15 @@
             <a href="about.html#ingredients">About the ingredients</a>
           </div>
         </div>
-        <a href="benefits.html" aria-current="page">Benefits</a>
+        <div class="dropdown">
+          <a href="benefits.html" class="dropdown-toggle" aria-haspopup="menu" aria-current="page">Benefits ▾</a>
+          <div class="dropdown-menu">
+            <a href="benefits.html#tallow">Tallow</a>
+            <a href="benefits.html#coconut-oil">Coconut Oil</a>
+            <a href="benefits.html#castor-oil">Castor Oil</a>
+            <a href="benefits.html#olive-oil">Olive Oil</a>
+          </div>
+        </div>
         <a href="contact.html">Contact</a>
         <button id="cart-toggle" aria-controls="cart" aria-expanded="false">My Bag (<span id="cart-count">0</span>)</button>
       </nav>
@@ -40,7 +48,7 @@
       </div>
 
       <div class="values-section">
-        <article class="value-item">
+        <article class="value-item" id="tallow">
           <h2>Tallow</h2>
           <p>
             <strong>Our main and most natural ingredient.</strong> Tallow from grass-fed animals is rich in vitamins A, D, E, and K, 
@@ -50,7 +58,7 @@
           </p>
         </article>
 
-        <article class="value-item">
+        <article class="value-item" id="olive-oil">
           <h2>Olive Oil</h2>
           <p>
             Known for its moisturizing and antioxidant properties, olive oil is rich in vitamins E and A. It helps maintain skin 
@@ -59,12 +67,21 @@
           </p>
         </article>
 
-        <article class="value-item">
+        <article class="value-item" id="coconut-oil">
           <h2>Coconut Oil</h2>
           <p>
             Coconut oil is naturally antibacterial and antimicrobial, helping to cleanse and protect the skin. It produces a rich, 
             fluffy lather and provides excellent cleansing properties. High in lauric acid, coconut oil is deeply nourishing and 
             helps create a hard, long-lasting bar of soap.
+          </p>
+        </article>
+
+        <article class="value-item" id="castor-oil">
+          <h2>Castor Oil</h2>
+          <p>
+            Castor oil is known for its exceptional moisturizing and healing properties. Rich in ricinoleic acid, it helps to 
+            hydrate and soften the skin while providing anti-inflammatory benefits. In soap making, castor oil creates a stable, 
+            luxurious lather and helps the soap retain moisture, making it particularly beneficial for dry or sensitive skin.
           </p>
         </article>
 
