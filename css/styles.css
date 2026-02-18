@@ -134,7 +134,7 @@ body {
   background: var(--bg-light);
   color: var(--primary-color);
   outline: 2px solid var(--primary-color);
-  outline-offset: -2px;
+  outline-offset: 2px;
 }
 
 /* ===== Hero Section ===== */
