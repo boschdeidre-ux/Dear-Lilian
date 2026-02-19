@@ -739,6 +739,21 @@ body {
   color: var(--text-muted);
 }
 
+.value-item ul {
+  margin: 16px 0;
+  padding-left: 24px;
+  line-height: 1.8;
+  color: var(--text-muted);
+}
+
+.value-item li {
+  margin-bottom: 12px;
+}
+
+.value-item li strong {
+  color: var(--primary-color);
+}
+
 .cta-box {
   background: linear-gradient(135deg, var(--bg-cream), #efe9dc);
   padding: 32px;
