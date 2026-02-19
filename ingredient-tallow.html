@@ -1,0 +1,113 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Tallow Benefits - Dear Lilian</title>
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="index.html">Dear Lilian</a>
+      <nav class="main-nav" aria-label="Main navigation">
+        <a href="index.html">Home</a>
+        <a href="shop.html">Shop</a>
+        <div class="dropdown">
+          <a href="about.html" class="dropdown-toggle" aria-haspopup="menu">About ▾</a>
+          <div class="dropdown-menu">
+            <a href="about.html#founder">About the founder</a>
+            <a href="about.html#products">About the products</a>
+            <a href="about.html#ingredients">About the ingredients</a>
+          </div>
+        </div>
+        <div class="dropdown">
+          <a href="benefits.html" class="dropdown-toggle" aria-haspopup="menu">Benefits ▾</a>
+          <div class="dropdown-menu">
+            <a href="ingredient-tallow.html">Tallow</a>
+            <a href="ingredient-coconut-oil.html">Coconut Oil</a>
+            <a href="ingredient-castor-oil.html">Castor Oil</a>
+            <a href="ingredient-olive-oil.html">Olive Oil</a>
+            <a href="ingredient-shea-butter.html">Shea Butter</a>
+            <a href="ingredient-essential-oils.html">Essential Oils</a>
+          </div>
+        </div>
+        <a href="contact.html">Contact</a>
+        <button id="cart-toggle" aria-controls="cart" aria-expanded="false">My Bag (<span id="cart-count">0</span>)</button>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <div class="page-container">
+      <h1 class="page-title text-center">Tallow</h1>
+      
+      <div class="page-header">
+        <p>
+          <strong>Our main and most natural ingredient.</strong> Tallow from grass-fed animals is remarkably beneficial for your skin. 
+          Here's why beef tallow is so good for your skin:
+        </p>
+      </div>
+
+      <div class="values-section">
+        <article class="value-item">
+          <h2>Benefits of Tallow</h2>
+          <ul>
+            <li id="biocompatible"><strong>Biocompatible with Human Skin:</strong> Tallow's fatty acid composition is nearly identical to the natural oils (sebum) in human skin, making it highly compatible and easily absorbed without clogging pores.</li>
+            <li id="vitamins"><strong>Rich in Fat-Soluble Vitamins:</strong> Contains high levels of vitamins A, D, E, and K, which are essential for skin health, cell regeneration, and maintaining a youthful appearance.</li>
+            <li id="moisturizing"><strong>Deeply Moisturizing:</strong> Provides long-lasting hydration that penetrates deep into the skin layers, helping to combat dryness and maintain softness.</li>
+            <li id="barrier"><strong>Repairs Skin Barrier:</strong> Helps restore and strengthen the skin's natural protective barrier, which is crucial for keeping moisture in and irritants out.</li>
+            <li id="anti-inflammatory"><strong>Anti-Inflammatory Properties:</strong> Contains conjugated linoleic acid (CLA) and other compounds that help reduce inflammation, redness, and skin irritation.</li>
+            <li id="anti-aging"><strong>Anti-Aging Benefits:</strong> The rich vitamin content helps minimize the appearance of fine lines, wrinkles, and age spots while promoting skin elasticity.</li>
+            <li id="healing"><strong>Supports Skin Healing:</strong> Promotes faster healing of minor wounds, burns, and skin conditions due to its nourishing and restorative properties.</li>
+            <li id="non-comedogenic"><strong>Non-Comedogenic:</strong> Despite being an oil, tallow doesn't clog pores and is suitable for all skin types, including acne-prone skin.</li>
+            <li id="balances"><strong>Balances Skin's Natural Oils:</strong> Helps regulate sebum production, making it beneficial for both dry and oily skin types.</li>
+            <li id="traditional"><strong>Time-Tested Traditional Remedy:</strong> Has been used for centuries in traditional skincare across cultures, proving its effectiveness and safety.</li>
+            <li id="soap"><strong>Creates Superior Soap:</strong> Produces a creamy, long-lasting bar with a luxurious lather that cleanses gently without stripping the skin of its natural oils.</li>
+            <li id="sustainable"><strong>Sustainable and Natural:</strong> A traditional, minimally processed ingredient that's environmentally friendly and free from synthetic chemicals.</li>
+          </ul>
+        </article>
+      </div>
+
+      <div class="cta-box">
+        <h2>Experience the Difference</h2>
+        <p>
+          Natural ingredients make a real difference. No harsh chemicals, no synthetic fragrances—just pure, skin-loving goodness 
+          in every bar.
+        </p>
+        <a href="shop.html" class="btn primary">Shop Now</a>
+      </div>
+    </div>
+  </main>
+
+  <aside id="cart" class="cart" aria-hidden="true">
+    <div class="cart-inner">
+      <button id="cart-close" aria-label="Close bag">✕</button>
+      <h3>My Bag</h3>
+      <ul id="cart-items" class="cart-items"></ul>
+      <div class="cart-summary">
+        <div>Subtotal: <strong id="cart-subtotal">ZAR0.00</strong></div>
+        <button id="checkout-btn" class="btn primary">Checkout</button>
+      </div>
+    </div>
+  </aside>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div>
+        <strong>Dear Lilian</strong>
+        <p>Handmade natural soaps. Based in Johannesburg.</p>
+      </div>
+      <div>
+        <h4>Contact</h4>
+        <p><a href="contact.html">Contact form</a> • <a href="mailto:bosch.deidre@gmail.com">bosch.deidre@gmail.com</a></p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- PayPal SDK -->
+  <script src="https://www.paypal.com/sdk/js?client-id=test&currency=ZAR" data-sdk-integration-source="button-factory"></script>
+  
+  <script src="js/shop.js" defer></script>
+</body>
+</html>
