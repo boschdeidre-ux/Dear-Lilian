@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Contact - Dear Lilian</title>
+  <title>Flax Gel Benefits - Dear Lilian</title>
   <link rel="icon" type="image/svg+xml" href="favicon.svg" />
   <link rel="stylesheet" href="css/styles.css" />
 </head>
@@ -34,7 +34,7 @@
             <a href="ingredient-flax-gel.html">Flax Gel</a>
           </div>
         </div>
-        <a href="contact.html" aria-current="page">Contact</a>
+        <a href="contact.html">Contact</a>
         <button id="cart-toggle" aria-controls="cart" aria-expanded="false">My Bag (<span id="cart-count">0</span>)</button>
       </nav>
     </div>
@@ -42,42 +42,39 @@
 
   <main class="container">
     <div class="page-container">
+      <h1 class="page-title text-center">Flax Gel</h1>
+      
       <div class="page-header">
-        <h1>Get in Touch</h1>
-        <p>We'd love to hear from you! Whether you have a question about our products, need help with an order, or just want to say hello, drop us a message.</p>
+        <p>
+          Derived from flaxseeds soaked in water, flax gel is a nutrient-rich, plant-based ingredient celebrated for its 
+          remarkable skin-softening and soothing properties, making it a wonderful addition to natural skincare.
+        </p>
       </div>
 
-      <form class="contact-form" id="contact-form" action="#" method="post">
-        <div class="form-group">
-          <label for="name">Name <span class="required">*</span></label>
-          <input type="text" id="name" name="name" required aria-required="true" />
-        </div>
+      <div class="values-section">
+        <article class="value-item">
+          <h2>Benefits of Flax Gel</h2>
+          <ul>
+            <li><strong>Intense Hydration:</strong> Flax gel acts as a natural humectant, drawing moisture into the skin and locking it in for long-lasting hydration and softness.</li>
+            <li><strong>Rich in Omega-3 Fatty Acids:</strong> Packed with alpha-linolenic acid (ALA), flax gel nourishes the skin barrier, helping to restore suppleness and a healthy glow.</li>
+            <li><strong>Soothes Irritated Skin:</strong> Its natural anti-inflammatory compounds calm redness, itching, and irritation, making it ideal for sensitive or reactive skin types.</li>
+            <li><strong>Improves Skin Elasticity:</strong> Regular use helps boost collagen support and skin elasticity, contributing to a firmer, more youthful appearance.</li>
+            <li><strong>Antioxidant Protection:</strong> Flax gel is rich in lignans and vitamin E, powerful antioxidants that protect the skin from environmental stressors and free radical damage.</li>
+            <li><strong>Balances Skin Texture:</strong> Helps smooth rough or uneven skin texture, leaving the skin feeling velvety soft and looking refreshed.</li>
+            <li><strong>Gentle on Sensitive Skin:</strong> Free from harsh chemicals and synthetic additives, flax gel is gentle enough for even the most delicate skin, including eczema-prone skin.</li>
+            <li><strong>Promotes Skin Healing:</strong> The natural mucilage in flax gel forms a protective layer over the skin, supporting the healing of minor irritations and maintaining the skin's natural moisture balance.</li>
+            <li><strong>Lightweight and Non-Greasy:</strong> Unlike heavier oils, flax gel absorbs quickly into the skin without leaving a greasy residue, making it suitable for all skin types including oily and combination skin.</li>
+          </ul>
+        </article>
+      </div>
 
-        <div class="form-group">
-          <label for="email">Email <span class="required">*</span></label>
-          <input type="email" id="email" name="email" required aria-required="true" />
-        </div>
-
-        <div class="form-group">
-          <label for="subject">Subject</label>
-          <input type="text" id="subject" name="subject" />
-        </div>
-
-        <div class="form-group">
-          <label for="message">Message <span class="required">*</span></label>
-          <textarea id="message" name="message" required aria-required="true"></textarea>
-        </div>
-
-        <button type="submit" class="btn primary btn-full">Send Message</button>
-      </form>
-
-      <div class="contact-info">
-        <h2>Other Ways to Reach Us</h2>
-        <p><strong>Email:</strong> <a href="mailto:bosch.deidre@gmail.com">bosch.deidre@gmail.com</a></p>
-        <p><strong>Location:</strong> Johannesburg, South Africa</p>
-        <p class="text-muted-italic">
-          We typically respond within 1-2 business days
+      <div class="cta-box">
+        <h2>Experience the Difference</h2>
+        <p>
+          Natural ingredients make a real difference. No harsh chemicals, no synthetic fragrances—just pure, skin-loving goodness 
+          in every bar.
         </p>
+        <a href="shop.html" class="btn primary">Shop Now</a>
       </div>
     </div>
   </main>
@@ -111,13 +108,5 @@
   <script src="https://www.paypal.com/sdk/js?client-id=test&currency=ZAR" data-sdk-integration-source="button-factory"></script>
   
   <script src="js/shop.js" defer></script>
-  <script>
-    // Simple form submission handler (for demonstration)
-    document.getElementById('contact-form').addEventListener('submit', function(e) {
-      e.preventDefault();
-      alert('Thank you for your message! We will get back to you soon.\n\n(Note: This is a demo form. In production, this would send your message to our server.)');
-      this.reset();
-    });
-  </script>
 </body>
 </html>
