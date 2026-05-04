@@ -134,6 +134,8 @@
           response.json().then(function(data) {
             var msg = (data.errors && data.errors.map(function(e){ return e.message; }).join(', ')) || 'Something went wrong. Please try again or email us directly.';
             alert(msg);
+          }).catch(function() {
+            alert('Something went wrong. Please try again or email us directly at bosch.deidre@gmail.com');
           });
         }
       }).catch(function() {
