@@ -14,7 +14,8 @@
       id: 'lavender-01',
       title: 'Honey Lavender Soap',
       description: 'Calming lavender essential oil, gentle on sensitive skin.',
-      price: 60.00
+      price: 60.00,
+      image: 'images/honey-lavender.png'
     },
     {
       id: 'citrus-01',
@@ -27,7 +28,8 @@
       id: 'hotproc-01',
       title: 'Natural, unfragranced tallow soap',
       description: 'Pure and simple tallow soap, unfragranced and gentle on all skin types.',
-      price: 50.00
+      price: 50.00,
+      image: 'images/natural-tallow.png'
     },
     {
       id: 'coffee-castoroil-01',
@@ -40,25 +42,29 @@
       id: 'lotion-bar-01',
       title: 'Natural Body Lotion Bars',
       description: 'Nourishing solid lotion bars made with natural ingredients to moisturize and protect your skin.',
-      price: 70.00
+      price: 70.00,
+      image: 'images/lotion-bars.png'
     },
     {
       id: 'body-butter-01',
       title: 'Natural Body Butters',
       description: 'Rich, creamy body butters made with natural ingredients to deeply nourish and hydrate your skin. 100ml.',
-      price: 150.00
+      price: 150.00,
+      image: 'images/body-butter.png'
     },
     {
       id: 'whipped-body-butter-01',
       title: 'Whipped Body Butter',
       description: 'Light, airy whipped body butter that melts into your skin, providing deep moisture without the greasy feel. 100ml.',
-      price: 200.00
+      price: 200.00,
+      image: 'images/whipped-body-butter.png'
     },
     {
       id: 'face-serum-01',
       title: 'Natural Face Serum',
       description: 'Made-to-order nourishing face serum. Ingredients: flaxseed gel, castor oil, frankincense essential oil. 30ml.',
-      price: 90.00
+      price: 90.00,
+      image: 'images/face-serum.png'
     }
   ];
 
