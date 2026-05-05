@@ -29,7 +29,7 @@
       title: 'Natural, unfragranced tallow soap',
       description: 'Pure and simple tallow soap, unfragranced and gentle on all skin types.',
       price: 50.00,
-      image: 'images/natural-tallow.png'
+      image: 'images/natural unfragranced tallow soap.png'
     },
     {
       id: 'coffee-castoroil-01',
