@@ -50,7 +50,7 @@
       title: 'Natural Body Butters',
       description: 'Rich, creamy body butters made with natural ingredients to deeply nourish and hydrate your skin. 100ml.',
       price: 150.00,
-      image: 'images/body-butter.png'
+      image: 'images/Natural body butter.png'
     },
     {
       id: 'whipped-body-butter-01',
