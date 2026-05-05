@@ -64,7 +64,7 @@
       title: 'Natural Face Serum',
       description: 'Made-to-order nourishing face serum. Ingredients: flaxseed gel, castor oil, frankincense essential oil. 30ml.',
       price: 90.00,
-      image: 'images/face-serum.png'
+      image: 'images/Natural Face Serum.png'
     }
   ];
 
