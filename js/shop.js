@@ -15,7 +15,7 @@
       title: 'Honey Lavender Soap',
       description: 'Calming lavender essential oil, gentle on sensitive skin.',
       price: 60.00,
-      image: 'images/honey-lavender.png'
+      image: 'images/honey lavender soap.png'
     },
     {
       id: 'citrus-01',
