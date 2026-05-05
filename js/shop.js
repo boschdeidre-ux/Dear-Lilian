@@ -57,7 +57,7 @@
       title: 'Whipped Body Butter',
       description: 'Light, airy whipped body butter that melts into your skin, providing deep moisture without the greasy feel. 100ml.',
       price: 200.00,
-      image: 'images/whipped-body-butter.png'
+      image: 'images/natural whipped body butter.png'
     },
     {
       id: 'face-serum-01',
