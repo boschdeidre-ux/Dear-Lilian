@@ -315,16 +315,42 @@ body {
 .testimonials h2 {
   font-size: 2rem;
   color: var(--primary-dark);
-  margin-bottom: 32px;
+  margin-bottom: 40px;
 }
 
-.testimonials blockquote {
-  font-size: 1.25rem;
+.testimonials-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 24px;
+  text-align: left;
+}
+
+.testimonial-card {
+  background: var(--white);
+  border-radius: 12px;
+  padding: 28px;
+  box-shadow: var(--shadow);
+}
+
+.testimonial-stars {
+  color: #f4a261;
+  font-size: 1.1rem;
+  margin-bottom: 12px;
+}
+
+.testimonial-card blockquote {
+  font-size: 1rem;
   color: var(--text-muted);
   font-style: italic;
-  max-width: 700px;
-  margin: 0 auto;
   line-height: 1.8;
+  margin-bottom: 16px;
+}
+
+.testimonial-card cite {
+  font-style: normal;
+  font-weight: 600;
+  color: var(--primary-dark);
+  font-size: 0.95rem;
 }
 
 /* ===== Cart Sidebar ===== */
@@ -1149,5 +1175,80 @@ body {
   
   .paypal-modal-content h2 {
     font-size: 1.5rem;
+  }
+}
+
+/* ===== Trust Badges ===== */
+.trust-badges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin: 8px 0;
+}
+
+.trust-badge {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  background: var(--bg-cream);
+  border: 1px solid var(--border-color);
+  border-radius: 20px;
+  padding: 6px 14px;
+  font-size: 0.875rem;
+  color: var(--text-color);
+  font-weight: 500;
+}
+
+.trust-badge-icon {
+  font-size: 1rem;
+  line-height: 1;
+}
+
+/* ===== Floating WhatsApp Button ===== */
+.whatsapp-float {
+  position: fixed;
+  bottom: 28px;
+  right: 28px;
+  width: 56px;
+  height: 56px;
+  background: #25d366;
+  color: #fff;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 16px rgba(37,211,102,0.45);
+  z-index: 999;
+  transition: transform 0.2s, box-shadow 0.2s;
+  text-decoration: none;
+}
+
+.whatsapp-float:hover {
+  transform: scale(1.1);
+  box-shadow: 0 6px 20px rgba(37,211,102,0.55);
+  text-decoration: none;
+  opacity: 1;
+}
+
+.whatsapp-float svg {
+  width: 30px;
+  height: 30px;
+}
+
+@media (max-width: 768px) {
+  .whatsapp-float {
+    bottom: 20px;
+    right: 20px;
+    width: 50px;
+    height: 50px;
+  }
+
+  .whatsapp-float svg {
+    width: 26px;
+    height: 26px;
+  }
+
+  .testimonials-grid {
+    grid-template-columns: 1fr;
   }
 }
