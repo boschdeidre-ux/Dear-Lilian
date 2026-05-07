@@ -617,7 +617,8 @@ body {
     float: none;
     margin: 0 auto 24px;
     display: block;
-    max-width: 250px;
+    width: 250px;
+    height: 250px;
   }
 }
 
@@ -728,9 +729,10 @@ body {
 
 /* About Page Styles */
 .founder-photo {
-  max-width: 300px;
-  width: 100%;
-  border-radius: 12px;
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  object-fit: cover;
   box-shadow: var(--shadow);
   margin: 0 24px 16px 0;
   float: left;
