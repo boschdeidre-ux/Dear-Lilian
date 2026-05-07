@@ -158,6 +158,16 @@ body {
   color: var(--primary-dark);
   margin-bottom: 16px;
   letter-spacing: 1px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+}
+
+.hero-title-logo {
+  width: 72px;
+  height: auto;
+  display: block;
 }
 
 .hero-subtitle {
@@ -573,7 +583,12 @@ body {
 /* ===== Responsive Design ===== */
 @media (max-width: 768px) {
   .hero-title {
-    font-size: 2.5rem;
+    font-size: 2.25rem;
+    gap: 10px;
+  }
+
+  .hero-title-logo {
+    width: 48px;
   }
   
   .hero-subtitle {
